@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Coffee Shop</title>
+    <link rel="stylesheet" href="css/ordernow.css"> 
+</head>
+<body>
+    <header>
+        <h1>Order Your Coffee</h1>
+    </header>
+
+    <main>
+        <form action="ordernow.php" method="POST">
+            <!-- Coffee Selection -->
+            <section id="coffee-selection">
+                <h2>Select Your Coffee</h2>
+                <label for="coffee-type">Coffee Type:</label>
+                <select id="coffee-type" name="coffee_type" required>
+                    <option value="espresso">Espresso</option>
+                    <option value="latte">Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="americano">Americano</option>
+                    <option value="mocha">Mocha</option>
+                </select>
+            </section>
+
+            <!-- Customization Options -->
+            <section id="customization">
+                <h2>Customize Your Coffee</h2>
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <label for="milk">Milk:</label>
+                <select id="milk" name="milk">
+                    <option value="none">None</option>
+                    <option value="whole">Whole Milk</option>
+                    <option value="skim">Skim Milk</option>
+                    <option value="soy">Soy Milk</option>
+                    <option value="almond">Almond Milk</option>
+                </select>
+
+                <label for="sugar">Sugar:</label>
+                <input type="number" id="sugar" name="sugar" min="0" max="5" value="0">
+
+                <label for="extras">Extras:</label>
+                <div id="extras">
+                    <input type="checkbox" id="extra-shot" name="extras" value="extra_shot">
+                    <label for="extra-shot">Extra Shot</label>
+                    <input type="checkbox" id="whipped-cream" name="extras" value="whipped_cream">
+                    <label for="whipped-cream">Whipped Cream</label>
+                    <input type="checkbox" id="syrup" name="extras" value="syrup">
+                    <label for="syrup">Flavor Syrup</label>
+                </div>
+            </section>
+
+            <!-- User Details -->
+            <section id="user-details">
+                <h2>Your Details</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="pickup-time">Preferred Pickup Time:</label>
+                <input type="time" id="pickup-time" name="pickup_time" required>
+            </section>
+
+            <!-- Submit Button -->
+            <section id="submit-order">
+                <button type="submit">Order Now</button>
+            </section>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
